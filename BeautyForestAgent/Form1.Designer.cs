@@ -34,9 +34,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnTray = new System.Windows.Forms.Button();
             this.cmsMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.ntiTray = new System.Windows.Forms.NotifyIcon(this.components);
             this.미림V3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.종료ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ntiTray = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.cmsMenu.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +58,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(466, 14);
             this.label1.TabIndex = 1;
-            this.label1.Text = "(주)미림스쿨 - Beauty Forest Agent v0.1 by [학번] [이름]";
+            this.label1.Text = "(주)미림스쿨 - Beauty Forest Agent v0.1 by [3209] [성연주]";
             // 
             // btnTray
             // 
@@ -69,6 +69,7 @@
             this.btnTray.TabIndex = 2;
             this.btnTray.Text = "▼";
             this.btnTray.UseVisualStyleBackColor = true;
+            this.btnTray.Click += new System.EventHandler(this.BtnTray_Click);
             // 
             // cmsMenu
             // 
@@ -78,23 +79,26 @@
             this.cmsMenu.Name = "cmsMenu";
             this.cmsMenu.Size = new System.Drawing.Size(114, 48);
             // 
-            // ntiTray
-            // 
-            this.ntiTray.ContextMenuStrip = this.cmsMenu;
-            this.ntiTray.Icon = ((System.Drawing.Icon)(resources.GetObject("ntiTray.Icon")));
-            this.ntiTray.Text = "트레이 아이콘";
-            // 
             // 미림V3ToolStripMenuItem
             // 
             this.미림V3ToolStripMenuItem.Name = "미림V3ToolStripMenuItem";
             this.미림V3ToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.미림V3ToolStripMenuItem.Text = "미림V3";
+            this.미림V3ToolStripMenuItem.Click += new System.EventHandler(this.미림V3ToolStripMenuItem_Click);
             // 
             // 종료ToolStripMenuItem
             // 
             this.종료ToolStripMenuItem.Name = "종료ToolStripMenuItem";
             this.종료ToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.종료ToolStripMenuItem.Text = "종료";
+            this.종료ToolStripMenuItem.Click += new System.EventHandler(this.종료ToolStripMenuItem_Click);
+            // 
+            // ntiTray
+            // 
+            this.ntiTray.ContextMenuStrip = this.cmsMenu;
+            this.ntiTray.Icon = ((System.Drawing.Icon)(resources.GetObject("ntiTray.Icon")));
+            this.ntiTray.Text = "notifyicon";
+            this.ntiTray.DoubleClick += new System.EventHandler(this.NtiTray_DoubleClick);
             // 
             // Form1
             // 
@@ -110,7 +114,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Beauty Forest Agent v0.1 by [학번] [이름]";
+            this.Text = "Beauty Forest Agent v0.1 by [3209] [성연주]";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.cmsMenu.ResumeLayout(false);
             this.ResumeLayout(false);
